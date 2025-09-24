@@ -11,7 +11,7 @@ public class Menu {
         Process process;
         try{
 
-            pb = new ProcessBuilder( "ping", "-c", "1", ip);
+            pb = new ProcessBuilder( "ping", "-c", "4", ip);
             process = pb.start();
 
             Scanner scan = new Scanner(process.getInputStream());
@@ -28,6 +28,7 @@ public class Menu {
     public static void main(String[] args) {
         int opc = 0;
         Scanner teclado = new Scanner(System.in);
+        Scanner teclado2 = new Scanner(System.in);
         do{
 
             System.out.println("Elige una de las siguientes opciones:");
@@ -41,7 +42,10 @@ public class Menu {
 
             switch (opc){
                 case 1:
-                    ejecutarPing("0.0.0.0");
+                    System.out.println("Introduce la ip:");
+                    String ip;
+                    ip = teclado2.nextLine();
+                    ejecutarPing(ip);
                     break;
 
                 case 2:
