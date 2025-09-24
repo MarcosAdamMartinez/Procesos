@@ -11,7 +11,7 @@ public class EjecProceso {
 
         try{
 
-            pb = new ProcessBuilder("gnome-terminal","");
+            pb = new ProcessBuilder( "ping", "-c", "4", "0.0.0.0");
             File log = new File("salida.log");
             pb.redirectOutput(log);
             pb.redirectError(log);
