@@ -11,15 +11,15 @@ public class EjecProceso {
 
         try{
 
-            pb = new ProcessBuilder( "ping", "-c", "4", "0.0.0.0");
+            pb = new ProcessBuilder( "ls");
             File log = new File("salida.log");
             pb.redirectOutput(log);
             pb.redirectError(log);
             process = pb.start();
-            int retorno = process.waitFor();
+//            int retorno = process.waitFor();
 
-            System.out.println("La ejecución de "+pb.command()+" devuelve "+retorno);
-            System.out.println("Las variable de entorno del proceso son: "+pb.environment());
+//            System.out.println("La ejecución de "+pb.command()+" devuelve "+retorno);
+//            System.out.println("Las variable de entorno del proceso son: "+pb.environment());
         } catch (Exception ex) {
             throw new RuntimeException(ex);
         }
@@ -48,12 +48,12 @@ public class EjecProceso {
 
     public static void main(String[] args) {
 
-        String comando = "gnome-terminal";
+//        String comando = "gnome-terminal";
 //        String comando2 = "notepad";
         EjecProceso ep = new EjecProceso();
         ep.ejecutarPB();
 
-        //ep.ejecutarRun(args);
+//        ep.ejecutarRun(args);
     }
 
 }
