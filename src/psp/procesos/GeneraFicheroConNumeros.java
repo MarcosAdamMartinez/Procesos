@@ -27,7 +27,8 @@ public class GeneraFicheroConNumeros {
             e.printStackTrace();
         }
 
-        System.out.println("Fichero generado");
+        System.out.println("Fichero" +
+                "");
 
     }
 

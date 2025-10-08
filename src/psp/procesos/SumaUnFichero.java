@@ -7,8 +7,9 @@ public class SumaUnFichero {
 
     public static void main(String[] args) {
 
-        if(args.length<1){
-            System.out.println("Se necesita el nombre del fichero");
+        if (args.length < 1) {
+            System.err.println("Se necesita el nombre del fichero");
+            System.exit(1);
         }
 
         String filename = args[0];
